@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root 'crypto_currencies#home'
+  get '/about', to: 'crypto_currencies#about'
+  get '/details', to: 'crypto_currencies#details'
+
 end
