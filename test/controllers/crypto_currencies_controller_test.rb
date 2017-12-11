@@ -1,19 +1,27 @@
 require 'test_helper'
 
 class CryptoCurrenciesControllerTest < ActionDispatch::IntegrationTest
+  def setup
+    @base_title = "| CryptoTracker"
+  end
+
+
   test "should get home" do
-    get crypto_currencies_home_url
+    get root_url
     assert_response :success
+    assert_select "title", "Home #{@base_title}"
   end
 
   test "should get about" do
-    get crypto_currencies_about_url
+    get about_url
     assert_response :success
+    assert_select "title", "About #{@base_title}"
   end
 
   test "should get details" do
-    get crypto_currencies_details_url
+    get details_url
     assert_response :success
+    assert_select "title", "Details #{@base_title}"
   end
 
 end
