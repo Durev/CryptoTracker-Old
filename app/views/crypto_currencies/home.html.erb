@@ -1,4 +1,10 @@
 <% provide(:title, "Home") %>
 <h1>Home</h1>
 
-<p>Here we display a dashboard with main cryptocurrencies and basic data from CoinMarketCap API.</p>
+<div>
+  <% @cryptos_list.each do |crypto| %>
+    <h2><%= crypto["name"] %></h2>
+    <p><%= crypto["price_usd"] %> $</p>
+    <hr>
+  <% end %>
+</div>
