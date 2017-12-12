@@ -5,3 +5,14 @@
 .about-header {
   background-image: url(image-path('code.jpg'));
 }
+
+// Home page
+@media (min-width: 992px) {
+  .crypto-data.row{
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+

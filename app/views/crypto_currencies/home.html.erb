@@ -27,17 +27,28 @@
           <div class="col-md-8 col-md-offset-2">
             <h2 class="title">Crypto list</h2>
             <h5 class="description">Here are the last prices</h5>
-            <hr>
           </div>
         </div>
+        <hr>
 
-        <div class="row">
-          <% @cryptos_list.each do |crypto| %>
-            <h2><%= crypto["name"] %></h2>
-            <p><%= crypto["price_usd"] %> $</p>
-            <hr>
-          <% end %>
-        </div> <!-- /row -->
+        <% @cryptos_list.each do |crypto| %>
+
+          <div class="row crypto-data">
+            <div class="col-md-4">
+              <h2 class="title"><%= crypto["name"] %></h2>
+              <h3><%= crypto["symbol"] %></h3>
+            </div>
+            <div class="col-md-4">
+              <h3><%= crypto["price_usd"] %> $</h3>
+            </div>
+            <div class="col-md-4">
+              <p>24 h : <%= crypto["percent_change_24h"] %> %</p>
+              <p>7 d : <%= crypto["percent_change_7d"] %> %</p>
+            </div>
+          </div> <!-- /row -->
+          <hr>
+
+        <% end %>
 
       </div> <!-- /section -->
     </div> <!-- /container -->
