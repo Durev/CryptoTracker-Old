@@ -1,4 +1,94 @@
 <% provide(:title, "About") %>
-<h1>About</h1>
+<% provide(:body_class, "profile-page") %>
 
-<p>This is simple Rails app using a few APIs to display useful data and track cryptocurrencies price.</p>
+<div class="wrapper">
+  <div class="header header-filter about-header"></div> <!-- /header -->
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+
+        <div class="row">
+          <div class="profile">
+            <div class="avatar">
+              <%= image_tag 'btc.png', alt: 'Bitcoin logo', class: 'img-circle img-responsive img-raised' %>
+            </div>
+            <div class="name">
+              <h3 class="title">About</h3>
+            </div>
+          </div>
+        </div> <!-- /row -->
+
+        <div class="description text-center">
+          <p>This is just a simple web app designed to track cryptocurrencies prices. Here are some experts views on the subject. </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="profile-tabs">
+              <div class="nav-align-center">
+
+                <ul class="nav nav-pills" role="tablist">
+                  <li class="active">
+                    <a href="#studio" role="tab" data-toggle="tab">
+                      <i class="material-icons">camera</i> Doc
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#work" role="tab" data-toggle="tab">
+                      <i class="material-icons">palette</i> Work
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#shows" role="tab" data-toggle="tab">
+                      <i class="material-icons">favorite</i> Favorite
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="tab-content gallery">
+                  <div class="tab-pane active" id="studio">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <%= image_tag 'marty.jpg', alt: 'back to the future meme', class: 'img-rounded' %>
+                      </div>
+
+                    </div> <!-- /row -->
+                  </div>
+                  <div class="tab-pane text-center" id="work">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="" class="img-rounded" />
+                        <img src="" class="img-rounded" />
+                        <img src="" class="img-rounded" />
+                      </div>
+                      <div class="col-md-6">
+                        <img src="" class="img-rounded" />
+                        <img src="" class="img-rounded" />
+                      </div>
+                    </div> <!-- /row -->
+                  </div>
+                  <div class="tab-pane text-center" id="shows">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="" class="img-rounded" />
+                        <img src="" class="img-rounded" />
+                      </div>
+                      <div class="col-md-6">
+                        <img src="" class="img-rounded" />
+                        <img src="" class="img-rounded" />
+                        <img src="" class="img-rounded" />
+                      </div>
+                    </div> <!-- /row -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Profile Tabs -->
+          </div>
+        </div> <!-- /row -->
+
+      </div> <!-- /container -->
+    </div>
+  </div>
+
+</div> <!-- /wrapper -->
