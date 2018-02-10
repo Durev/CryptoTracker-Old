@@ -4,9 +4,7 @@ class CryptoCurrenciesController < ApplicationController
     @cryptos_list = JSON.parse(response.body)
   end
 
-  def about
-  end
+  def about; end
 
-  def details
-  end
+  def details; end
 end

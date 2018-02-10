@@ -5,7 +5,6 @@ class CryptoCurrenciesControllerTest < ActionDispatch::IntegrationTest
     @base_title = "| CryptoTracker"
   end
 
-
   test "should get home" do
     get root_url
     assert_response :success
@@ -23,5 +22,4 @@ class CryptoCurrenciesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Details #{@base_title}"
   end
-
 end
